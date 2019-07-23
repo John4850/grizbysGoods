@@ -13,6 +13,18 @@ function renderProduct(products) {
     img.alt = products.name + ' image';
     li.appendChild(img);
 
+    const p = document.createElement('p');
+    p.className = 'price';
+    li.appendChild(p);
+
+    const usd = products.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    const priceTextNode = document.createTextNode(usd);
+    p.appendChild(priceTextNode);
+
+    const button = document.createElement('button');
+    button.textContent = 'Add';
+    button.value = products.code;
+    p.appendChild(button);
 
     return li;
 }
