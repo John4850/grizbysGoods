@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    max-width: 500px;
+    background: deepskyblue
+}
+tbody {
+    color: rgb(255, 217, 0);
+}
+tbody tr:nth-child(even) {
+    background:cornflowerblue;
+}
+thead {
+    background: crimson;
+}
+tfoot {
+    color: whitesmoke;
+    background: darkblue;
+}
+html {
+    background-image: url('../assets/grizby.jpg');
+    background-attachment: fixed;
+    background-position: left;
+    background-size: auto;
+}
