@@ -22,6 +22,7 @@ li {
 .listStyle li:hover {
     Box-shadow: 2px 2px 3px #bbb;
     transform: translate3d(1px, -1px, 0);
+
 }
 h3 {
     color: rgb(255, 217, 0);

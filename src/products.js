@@ -1,13 +1,4 @@
 
-const bomb = {
-    code: 'bomb',
-    name: 'Goblin Bomb',
-    image: '../assets/goblinBomb.jpg',
-    description: 'Great for problems Near and Far',
-    category: 'ranged',
-    price: 200.00,
-    cost: 50.00,
-};
 const grenade = {
     code: 'grenade',
     name: 'Goblin Grenade',
@@ -16,15 +7,6 @@ const grenade = {
     category: 'ranged',
     price: 50.00,
     cost: 10.00,
-};
-const haveANiceDay = {
-    code: 'haveANiceDay',
-    name: 'Have a Nice Day',
-    image: 'assets/goblinHaveANiceDay.jpg',
-    description: 'end your day with a bang',
-    category: 'stationary',
-    price: 100.00,
-    cost: 25.00,
 };
 const mine = {
     code: 'mine',
@@ -53,12 +35,30 @@ const largetnt = {
     price: 75.00,
     cost: 20.00,
 };
+const bomb = {
+    code: 'bomb',
+    name: 'Goblin Bomb',
+    image: '../assets/goblinBomb.jpg',
+    description: 'Great for problems Near and Far',
+    category: 'ranged',
+    price: 200.00,
+    cost: 50.00,
+};
+const haveANiceDay = {
+    code: 'haveANiceDay',
+    name: 'Have a Nice Day',
+    image: 'assets/goblinHaveANiceDay.jpg',
+    description: 'End your day with a Bang',
+    category: 'stationary',
+    price: 100.00,
+    cost: 25.00,
+};
 const products = [
-    bomb,
-    grenade,
-    haveANiceDay,
-    mine,
     tnt,
     largetnt,
+    grenade,
+    mine,
+    haveANiceDay,
+    bomb,
 ];
 export default products;
