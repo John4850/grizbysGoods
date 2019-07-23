@@ -46,7 +46,7 @@ const tnt = {
 };
 const largetnt = {
     code: 'largetnt',
-    name: 'Goblin TNT, Large',
+    name: 'Goblin TNT Large',
     image: 'assets/goblinLargeTNT.jpg',
     description: 'Bigger is Better',
     category: 'stationary',
