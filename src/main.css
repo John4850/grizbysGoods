@@ -1,6 +1,4 @@
-table {
-    color: blue
-}
+
 li {
     list-style: none;
     position: relative;
@@ -14,3 +12,12 @@ li {
     text-align: center;
     box-shadow: 1px 1px 2px #ccc;
 }
+html {
+    background-image: url('../assets/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto
+}
+
+/* display: flex;
+flex-wrap: wrap; */

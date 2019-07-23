@@ -10,7 +10,13 @@ li {
     margin-bottom: 5px;
     text-align: center;
     box-shadow: 1px 1px 2px #ccc;
+    
 }
 #products li:hover {
     Box-shadow: 2px 2px 3px #bbb;
+}
+#products {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
