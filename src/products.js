@@ -2,7 +2,7 @@
 const bomb = {
     code: 'bomb',
     name: 'Goblin Bomb',
-    image: 'assets.goblinBomb.jpg',
+    image: '../assets/goblinBomb.jpg',
     description: 'Great for problems Near and Far',
     category: 'ranged',
     price: 200.00,
@@ -11,7 +11,7 @@ const bomb = {
 const grenade = {
     code: 'grenade',
     name: 'Goblin Grenade',
-    image: 'assets.goblinGrenade.jpg',
+    image: '../assets/goblinGrenade.jpg',
     description: 'Great for increading personal space, pull pin and throw. . .',
     category: 'ranged',
     price: 50.00,
@@ -20,7 +20,7 @@ const grenade = {
 const haveANiceDay = {
     code: 'haveANiceDay',
     name: 'Have a Nice Day',
-    image: 'assets.goblinHaveANiceDay.jpg',
+    image: 'assets/goblinHaveANiceDay.jpg',
     description: 'end your day with a bang',
     category: 'stationary',
     price: 100.00,
@@ -29,7 +29,7 @@ const haveANiceDay = {
 const mine = {
     code: 'mine',
     name: 'Goblin Mine',
-    image: 'assets.goblinMine.jpg',
+    image: 'assets/goblinMine.jpg',
     description: 'Set it and DON\'T Forget it',
     category: 'stationary',
     price: 20.00,
@@ -38,7 +38,7 @@ const mine = {
 const tnt = {
     code: 'tnt',
     name: 'Goblin TNT',
-    image: 'assets.goblinTNT.jpg',
+    image: 'assets/goblinTNT.jpg',
     description: 'Simple yet Effective',
     category: 'stationary',
     price: 10.00,
@@ -47,7 +47,7 @@ const tnt = {
 const largetnt = {
     code: 'largetnt',
     name: 'Goblin TNT, Large',
-    image: 'assets.goblinLargeTNT.jpg',
+    image: 'assets/goblinLargeTNT.jpg',
     description: 'Bigger is Better',
     category: 'stationary',
     price: 75.00,

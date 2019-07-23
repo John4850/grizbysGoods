@@ -10,13 +10,36 @@ li {
     margin-bottom: 5px;
     text-align: center;
     box-shadow: 1px 1px 2px #ccc;
-    
+    background-color: black;
 }
+    
+#products {
+        color: whitesmoke;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
 #products li:hover {
     Box-shadow: 2px 2px 3px #bbb;
 }
-#products {
-    padding: 0;
+footer {
+    text-align: center;
+    color: red;
+    text-shadow: 0px -1px black;
+    vertical-align: sub;
+}
+
+
+.price {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin-bottom: 1px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
