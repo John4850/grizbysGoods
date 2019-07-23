@@ -53,3 +53,12 @@ const largetnt = {
     price: 75,
     cost: 20,
 };
+const products = [
+    bomb,
+    grenade,
+    haveANiceDay,
+    mine,
+    tnt,
+    largetnt,
+];
+export default products;
