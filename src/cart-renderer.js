@@ -8,20 +8,18 @@ import cart from './shopping-cart.js';
 // calcOrderTotal(cart, products);
 
 function renderCart(cart) {
-    
+
     //generate a table with found values and qty
     const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    for(let i = 0; i < cart.length; i++) {
+        td.textContent = cart[i].code;
+        console.log(td);
+    
+    }
+    
     return tr;
     
-    const tbody = document.createElement('tbody');
-    tbody.textContent = cart.name;
-    tbody.appendChild(name);
 
 }
 export default renderCart;
-
-
-
-        //run calcLineTotal on each line of cart.
-            //run calcOrderTotal on cart
-//display values on HTML
