@@ -22,7 +22,7 @@ function renderProduct(products) {
     p.appendChild(priceTextNode);
 
     const button = document.createElement('button');
-    button.textContent = 'Add';
+    button.textContent = 'Buy';
     button.value = products.code;
     p.appendChild(button);
 
