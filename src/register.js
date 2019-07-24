@@ -15,15 +15,18 @@ export function findProduct(products, code) {
 }
 
 export function calcLineTotal(quantity, price) {
-    return (quantity * price).toFixed(2);
+    let totaledLine = (quantity * price).toFixed(2);
+    return parseFloat(totaledLine);
 }
-export function calcOrderTotal(cart) {
+export function calcOrderTotal(cart, products) {
     let grandTotal = 0;
     for(let i = 0; i < cart.length; i++) {
-        grandTotal = calcLineTotal(cart[i]);
-        
-        console.log(grandTotal);
-    }
 
+        let cartProducts = cart[i].code;
+        let cartQuantity = cart[i].quantity;
+        let foundInCart = findProduct(products, cartProducts);
+        let totaledLine = calcLineTotal(cartQuantity, foundInCart.price);
+        grandTotal += totaledLine;
+    }
     return grandTotal;
 }

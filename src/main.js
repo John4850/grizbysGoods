@@ -1,5 +1,5 @@
-import renderProduct from '../src/product-renderer.js';
-import products from '../src/products.js';
+import renderProduct from './product-renderer.js';
+import products from './products.js';
 
 const list = document.getElementById('products');
 
