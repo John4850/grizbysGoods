@@ -53,7 +53,7 @@ test('calculate order total', assert => {
 
     assert.equal (grandTotal, expected);
 });
-// test('Renders Shopping Cart with Name, Qty, and Totals', assert => {
+// test('Renders Shopping Cart with Names', assert => {
 //     const cart = [{
 //         code: 'bomb',
 //         quantity: 2,

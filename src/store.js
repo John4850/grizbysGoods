@@ -15,7 +15,7 @@ const store = {
     getProducts() {
         let items = store.get('items');
         if(!items){
-            store.save('items', products);
+            store.save(items, products);
         }
         return products;
     }

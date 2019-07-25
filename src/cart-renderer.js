@@ -14,7 +14,7 @@ function renderCart(cart) {
     const td = document.createElement('td');
     for(let i = 0; i < cart.length; i++) {
         td.textContent = cart[i].code;
-        console.log(td);
+        
     
     }
     
