@@ -35,3 +35,31 @@ test('Get shopping cart, if none exists, create one.', assert => {
 //test
     assert.deepEqual(shoppingCart, []);
 });
+
+test('Adds item to Shopping cart, or updates qty', assert => {
+    const code = 'grenade';
+    const expected = [{
+        code: 'grenade',
+        quantity: 1
+    }];
+    store.orderProduct(code);
+    const shoppingCart = store.getShoppingCart();
+
+    assert.deepEqual(shoppingCart, expected);
+    console.log(shoppingCart);
+
+});
+
+test('Confirms QTY updates if ordering multiple items', assert => {
+    const code = 'grenade';
+    const expected = [{
+        code: 'grenade',
+        quantity: 2
+    }];
+    store.orderProduct(code);
+    store.orderProduct(code);
+    const shoppingCart = store.getShoppingCart();
+
+    assert.deepEqual(shoppingCart, expected);
+    console.log(shoppingCart);
+});

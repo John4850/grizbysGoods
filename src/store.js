@@ -32,6 +32,23 @@ const store = {
             shoppingCart = [];
         }
         return shoppingCart;
+    },
+    orderProduct(code) {
+        const shoppingCart = store.getShoppingCart();
+        const lineItem = findProduct(shoppingCart, code);
+        if(lineItem) {
+            lineItem.quantity++;
+        }
+        else {
+            const lineItem = {
+                code: code,
+                quantity: 1
+            };
+        //sends to cart
+            shoppingCart.push(lineItem);
+        }
+        //saves the cart
+        store.save(SHOPPING_CART_KEY, shoppingCart);
     }
 };
 export default store;
