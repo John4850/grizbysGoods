@@ -1,6 +1,5 @@
 import store from '../src/store.js';
 import products from '../src/products.js';
-import renderProduct from '../src/product-renderer.js';
 
 const test = QUnit.test;
 QUnit.module('Data Store');
@@ -36,7 +35,7 @@ test('Get shopping cart, if none exists, create one.', assert => {
     assert.deepEqual(shoppingCart, []);
 });
 
-test('Adds item to Shopping cart, or updates qty', assert => {
+test('Adds item to Shopping cart', assert => {
     const code = 'grenade';
     const expected = [{
         code: 'grenade',
@@ -46,7 +45,6 @@ test('Adds item to Shopping cart, or updates qty', assert => {
     const shoppingCart = store.getShoppingCart();
 
     assert.deepEqual(shoppingCart, expected);
-    console.log(shoppingCart);
 
 });
 
@@ -61,5 +59,25 @@ test('Confirms QTY updates if ordering multiple items', assert => {
     const shoppingCart = store.getShoppingCart();
 
     assert.deepEqual(shoppingCart, expected);
-    console.log(shoppingCart);
+});
+
+test('getProduct returns found product', assert => {
+    const code = 'grenade';
+    const expected = 
+        {
+            code: 'grenade',
+            name: 'Goblin Grenade',
+            image: '../assets/goblinGrenade.jpg',
+            description: 'Great for increading personal space, pull pin and throw. . .',
+            category: 'ranged',
+            price: 50.00,
+            cost: 10.00,
+        };
+
+    store.getProduct(code);
+    const product = store.getProduct(code);
+
+    assert.deepEqual(product, expected);
+
+
 });

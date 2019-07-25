@@ -53,20 +53,18 @@ test('calculate order total', assert => {
 
     assert.equal (grandTotal, expected);
 });
-// test('Renders Shopping Cart with Names', assert => {
-//     const cart = [{
-//         code: 'bomb',
-//         quantity: 2,
-//         price: 200.00,
-//     }, {
-//         code: 'grenade',
-//         quantity: 1,
-//         price: 50.00,
-//     }];
+test('Renders Shopping Cart with Names', assert => {
+    const cart = [{
+        code: 'bomb',
+        quantity: 2,
+    }, {
+        code: 'grenade',
+        quantity: 1,
+    }];
     
-//     const expected = '<tr><td>bomb</td><td>200</td><td>2</td><td>400.00</td></tr>';
-//     const dom = renderCart(cart);
-//     const html = dom.outerHTML;
+    const expected = '<tr><td>bomb</td><td>200</td><td>2</td><td>400.00</td></tr>';
+    const dom = renderCart(cart);
+    const html = dom.outerHTML;
 
-//     assert.equal(html, expected);
-// });
+    assert.equal(html, expected);
+});
