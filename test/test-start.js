@@ -28,3 +28,10 @@ test ('test that get products returns product list', assert => {
     //assert
     assert.deepEqual(items, products);
 });
+
+test('Get shopping cart, if none exists, create one.', assert => {
+//arrange
+    const shoppingCart = store.getShoppingCart();
+//test
+    assert.deepEqual(shoppingCart, []);
+});
