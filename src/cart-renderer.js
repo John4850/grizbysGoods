@@ -1,5 +1,4 @@
-import products from './product-renderer.js';
-import { calcLineTotal, calcOrderTotal, findProduct } from './register.js';
+import { calcLineTotal } from './register.js';
 
 function renderLineItem(cartItem, product) {
     const tr = document.createElement('tr');

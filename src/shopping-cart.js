@@ -1,6 +1,6 @@
 import cart from './static-order.js'
 import products from './products.js';
-import { calcLineTotal, calcOrderTotal, findProduct } from './register.js';
+import { calcOrderTotal, findProduct } from './register.js';
 import renderLineItem from './cart-renderer.js';
 
 //loops through cart, generates table rows
