@@ -1,25 +1,28 @@
 import products from './product-renderer.js';
 import { calcLineTotal, calcOrderTotal, findProduct } from './register.js';
-import cart from './shopping-cart.js';
 
-
-// findProduct(cart);
-// calcLineTotal(cart, quantity);
-// calcOrderTotal(cart, products);
-
-function renderCart(cart) {
-
-    //generate a table with found values and qty
+function renderLineItem(cartItem, product) {
     const tr = document.createElement('tr');
-    const td = document.createElement('td');
-    for(let i = 0; i < cart.length; i++) {
-        td.textContent = cart[i].code;
-        
-    
-    }
-    
-    return tr;
-    
+    //name
+    const nameCell = document.createElement('td');
+    nameCell.textContent = product.name;
+    tr.appendChild(nameCell);
 
+    //quauntity
+    const quantityCell = document.createElement('td');
+    quantityCell.textContent = cartItem.quantity;
+    tr.appendChild(quantityCell);
+
+    //price
+    const priceCell = document.createElement('td');
+    priceCell.textContent = product.price;
+    tr.appendChild(priceCell);
+
+    //total
+    const totalCell = document.createElement('td');
+    const total = calcLineTotal(cartItem.quantity, product.price);
+    totalCell.textContent = total;
+    tr.appendChild(totalCell);    
+    return tr;
 }
-export default renderCart;
+export default renderLineItem;

@@ -1,6 +1,6 @@
 import products from '../src/products.js';
 import { findProduct, calcLineTotal, calcOrderTotal } from '../src/register.js';
-import renderCart from '../src/cart-renderer.js';
+import renderLineItem from '../src/cart-renderer.js';
 
 const test = QUnit.test;
 QUnit.module('Render Product');
@@ -54,17 +54,27 @@ test('calculate order total', assert => {
     assert.equal (grandTotal, expected);
 });
 test('Renders Shopping Cart with Names', assert => {
-    const cart = [{
+    const cartItem = {
         code: 'bomb',
         quantity: 2,
-    }, {
-        code: 'grenade',
-        quantity: 1,
-    }];
-    
-    const expected = '<tr><td>bomb</td><td>200</td><td>2</td><td>400.00</td></tr>';
-    const dom = renderCart(cart);
+    };
+    //expected is one row table 
+    const product = {
+        code: 'bomb',
+        name: 'Goblin Bomb',
+        image: '../assets/goblinBomb.jpg',
+        description: 'Great for problems Near and Far',
+        category: 'ranged',
+        price: 200.00,
+        cost: 50.00,
+    };
+    const expected = '<tr><td>Goblin Bomb</td><td>2</td><td>200</td><td>400</td></tr>';
+
+
+
+    //use a renderLineItem function instead
+    const dom = renderLineItem(cartItem, product);
     const html = dom.outerHTML;
 
-    assert.equal(html, expected);
+    assert.deepEqual(html, expected);
 });
