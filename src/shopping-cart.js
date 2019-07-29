@@ -1,10 +1,12 @@
-import cart from './static-order.js'
+import store from './store.js';
 import products from './products.js';
 import { calcOrderTotal, findProduct } from './register.js';
 import renderLineItem from './cart-renderer.js';
 
 //loops through cart, generates table rows
 const tbody = document.querySelector('tbody');
+const cart = store.getShoppingCart();
+
 for(let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
     const product = findProduct(products, cartItem.code);

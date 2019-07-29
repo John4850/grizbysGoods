@@ -1,3 +1,5 @@
+import store from "./store.js";
+
 
 function renderProduct(products) {
     const li = document.createElement('li');
@@ -24,6 +26,11 @@ function renderProduct(products) {
     const button = document.createElement('button');
     button.textContent = 'Buy';
     button.value = products.code;
+    button.addEventListener('click', () => {
+        store.orderProduct(products.code);
+        alert('Product Ordered!');
+    });
+
     p.appendChild(button);
 
     return li;
