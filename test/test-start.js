@@ -92,6 +92,5 @@ test('Adds a Product to Product\'s Page', assert => {
 
     store.addProduct(newItem);
     const products = store.getProducts();
-
     assert.deepEqual(products[products.length - 1], newItem);
 });
