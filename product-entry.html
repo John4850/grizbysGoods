@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="./src/products.css">
+    <title>Product Entry </title>
+</head>
+
+<body>
+    <h2>Current Products</h2>
+    <ul class=listStyle id="products"></ul>
+
+    <form id="add-product">
+        <P>
+            <label for="code">Code:</label>
+            <input id="code" required name="code" type="text">
+        </P>
+        <p>
+            <label for="name">Name:</label>
+            <input id="name" required name="name" type="text">
+        </p>
+        <P>
+            <label for="IMG">IMG:</label>
+            <input id="IMG" required name="IMG" type="text">
+        </P>
+        <p>
+            <label for="description">Description:</label>
+            <input id="description" required name="description" type="text">
+        </p>
+        <p>
+            <label for="category">category:</label>
+            <input id="category" required name="category" type="text">
+        </p>
+        <p>
+            <label for="price">price:</label>
+            <input id="price" required name="price" type="number" step=".01">
+        </p>
+        <button id="submit">Submit</button>
+        
+    </form>
+
+
+
+</body>
+<script src="src/main.js" type="module"></script>
+<script src="src/product-entry.js" type="module"></script>
+
+</html>

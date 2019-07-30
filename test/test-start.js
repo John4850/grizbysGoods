@@ -78,6 +78,19 @@ test('getProduct returns found product', assert => {
     const product = store.getProduct(code);
 
     assert.deepEqual(product, expected);
+});
 
+test('Adds a Product to Product\'s Page', assert => {
+    const newItem = {
+        code: 'newItem',
+        name: 'newItem',
+        image: '../assets/newItem.jpg',
+        description: 'newItem',
+        category: 'ranged',
+        price: 1.00,
+    };
 
+    store.addProduct(newItem);
+    const products = store.getProducts();
+    assert.deepEqual(products[products.length - 1], newItem);
 });

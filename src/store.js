@@ -2,6 +2,7 @@ import products from './products.js';
 import { findProduct } from '../src/register.js';
 
 const SHOPPING_CART_KEY = 'shopping-cart';
+const PRODUCT_KEY = 'products';
 const store = {
     storage: window.localStorage,
     save(key, item) {
@@ -25,7 +26,11 @@ const store = {
         const product = findProduct(products, code);
         return product;
     },
-    
+    addProduct(product) {
+        const products = store.getProducts();
+        products.push(product);
+        store.save(PRODUCT_KEY, product);
+    },    
     getShoppingCart() {
         let shoppingCart = store.get(SHOPPING_CART_KEY);
         if(!shoppingCart) {
