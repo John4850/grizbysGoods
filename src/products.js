@@ -2,7 +2,7 @@
 const grenade = {
     code: 'grenade',
     name: 'Goblin Grenade',
-    image: '../assets/goblinGrenade.jpg',
+    image: 'assets/goblinGrenade.jpg',
     description: 'Great for increading personal space, pull pin and throw. . .',
     category: 'ranged',
     price: 50.00,
@@ -38,7 +38,7 @@ const largetnt = {
 const bomb = {
     code: 'bomb',
     name: 'Goblin Bomb',
-    image: '../assets/goblinBomb.jpg',
+    image: 'assets/goblinBomb.jpg',
     description: 'Great for problems Near and Far',
     category: 'ranged',
     price: 200.00,
