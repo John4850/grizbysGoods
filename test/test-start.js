@@ -67,7 +67,7 @@ test('getProduct returns found product', assert => {
         {
             code: 'grenade',
             name: 'Goblin Grenade',
-            image: '../assets/goblinGrenade.jpg',
+            image: 'assets/goblinGrenade.jpg',
             description: 'Great for increading personal space, pull pin and throw. . .',
             category: 'ranged',
             price: 50.00,

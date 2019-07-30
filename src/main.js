@@ -1,6 +1,7 @@
 import renderProduct from './product-renderer.js';
-import products from './products.js';
+import store from './store.js';
 
+const products = store.getProducts();
 const list = document.getElementById('products');
 
 for(let i = 0; i < products.length; i++) {

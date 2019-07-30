@@ -12,7 +12,7 @@ test('find product by code', assert => {
     const expected = {
         code: 'bomb',
         name: 'Goblin Bomb',
-        image: '../assets/goblinBomb.jpg',
+        image: 'assets/goblinBomb.jpg',
         description: 'Great for problems Near and Far',
         category: 'ranged',
         price: 200.00,
@@ -62,7 +62,7 @@ test('Renders Shopping Cart with Names', assert => {
     const product = {
         code: 'bomb',
         name: 'Goblin Bomb',
-        image: '../assets/goblinBomb.jpg',
+        image:'goblinBomb.jpg',
         description: 'Great for problems Near and Far',
         category: 'ranged',
         price: 200.00,
