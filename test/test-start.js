@@ -1,6 +1,5 @@
 import store from '../src/store.js';
 import products from '../src/products.js';
-import { addProduct } from '../src/product-entry.js';
 
 const test = QUnit.test;
 QUnit.module('Data Store');
