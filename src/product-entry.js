@@ -4,6 +4,7 @@ const form = document.getElementById('add-product');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
     const formData = new FormData(form);
     const product = {
         code: formData.get('code'),
@@ -15,6 +16,8 @@ form.addEventListener('submit', (event) => {
     };
 
     store.addProduct(product);
+    alert('Product Added');
+
 });
 
 form.reset();
